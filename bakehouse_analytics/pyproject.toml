@@ -1,5 +1,5 @@
 [project]
-name = "healthacre_proj"
+name = "bakehouse_analytics"
 version = "0.0.1"
 authors = [{ name = "sdayal0912@gmail.com" }]
 requires-python = ">=3.12,<3.13"
@@ -21,7 +21,7 @@ dev = [
 ]
 
 [project.scripts]
-main = "healthacre_proj.main:main"
+main = "bakehouse_analytics.main:main"
 
 [build-system]
 requires = ["hatchling"]
