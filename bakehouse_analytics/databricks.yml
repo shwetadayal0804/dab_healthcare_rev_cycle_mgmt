@@ -1,8 +1,8 @@
-# This is a Declarative Automation Bundle definition for healthacre_proj.
+# This is a Declarative Automation Bundle definition for bakehouse_analytics.
 # See https://docs.databricks.com/dev-tools/bundles/index.html for documentation.
 bundle:
-  name: healthacre_proj
-  uuid: b37ae5f2-8f1a-4eac-8f16-5a16ef5b8bba
+  name: bakehouse_analytics
+  uuid: 57bd91a5-c269-45dc-be0e-fea42990a85d
 
 include:
   - resources/*.yml
@@ -25,7 +25,7 @@ targets:
     workspace:
       host: https://adb-7405610580840557.17.azuredatabricks.net
     variables:
-      catalog: healthcareproj
+      catalog: bakehouse_analytics_dev
       schema: rnd
   prod:
     mode: production
@@ -34,7 +34,7 @@ targets:
       # We explicitly deploy to /Workspace/Users/sdayal0912@gmail.com to make sure we only have a single copy.
       root_path: /Workspace/Users/sdayal0912@gmail.com/.bundle/${bundle.name}/${bundle.target}
     variables:
-      catalog: healthcareproj
+      catalog: bakehouse_analytics_prod
       schema: rnd
     permissions:
       - user_name: sdayal0912@gmail.com
